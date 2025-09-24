@@ -27,22 +27,13 @@ const Navbar04 = () => {
     }
   };
 
-
   return (
-    <nav className={`fixed top-0 left-0 right-0 h-16 z-50 transition-all duration-300 electrical-grid electrical-particles relative overflow-hidden ${
+    <nav className={`fixed top-0 left-0 right-0 h-20 z-50 transition-all duration-300 ${
       isScrolled 
-        ? 'backdrop-blur-md shadow-elevated border-b border-tvec-blue/50' 
-        : 'backdrop-blur-sm border-b border-tvec-blue/30'
+        ? 'bg-white/90 backdrop-blur-md shadow-md border-b border-gray-200' 
+        : 'bg-white'
     }`}>
-      {/* Hero-like background effects */}
-      <div className="absolute inset-0 gradient-electrical-flow opacity-40"></div>
-      <div className="absolute inset-0 bg-gradient-to-r from-tvec-navy/80 via-tvec-navy/60 to-tvec-navy/80"></div>
-      
-      {/* Animated background elements similar to hero */}
-      <div className="absolute top-1/2 left-1/4 w-8 h-8 bg-tvec-blue/20 rounded-full blur-md animate-float opacity-60"></div>
-      <div className="absolute top-1/2 right-1/4 w-6 h-6 bg-blue-300/20 rounded-full blur-sm animate-float opacity-50" style={{animationDelay: '1s'}}></div>
-      
-      <div className="relative z-10 h-full flex items-center justify-between max-w-7xl mx-auto px-6">
+      <div className="h-full flex items-center justify-between max-w-7xl mx-auto px-6">
         <Logo />
 
         {/* Desktop Menu */}
@@ -50,9 +41,9 @@ const Navbar04 = () => {
 
         <div className="flex items-center gap-3">
           <Button
-            variant="outline"
+            variant="default"
             onClick={handleContactClick}
-            className="hidden sm:inline-flex text-white"
+            className="hidden sm:inline-flex bg-tvec-green text-white hover:bg-tvec-green/90"
           >
             Contact
           </Button>

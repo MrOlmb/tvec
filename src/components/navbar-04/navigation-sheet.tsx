@@ -16,53 +16,39 @@ export const NavigationSheet = () => {
     }
   };
 
-  const handleQuoteClick = () => {
-    setIsOpen(false);
-    const element = document.querySelector('#contact');
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
-
   return (
     <Sheet open={isOpen} onOpenChange={setIsOpen}>
       <SheetTrigger asChild>
         <Button 
           variant="outline" 
           size="icon" 
-          className="rounded-full border-tvec-blue/50 text-white hover:text-tvec-yellow hover:bg-tvec-blue/20 hover:border-tvec-yellow/50 transition-all duration-300 group"
+          className="border-gray-300 text-tvec-navy hover:bg-gray-100"
         >
-          <Menu className="group-hover:lightning-glow transition-all duration-300" />
+          <Menu />
         </Button>
       </SheetTrigger>
-      <SheetContent className="px-6 py-8 bg-tvec-navy/95 backdrop-blur-md border-tvec-blue/30 electrical-grid-dense">
+      <SheetContent className="px-6 py-8 bg-white">
         <div className="flex items-center justify-between mb-8">
           <Logo />
           <Button
-            variant="outline"
+            variant="ghost"
             size="icon"
             onClick={() => setIsOpen(false)}
-            className="rounded-full border-tvec-blue/50 text-white hover:text-tvec-yellow hover:bg-tvec-blue/20 hover:border-tvec-yellow/50 transition-all duration-300"
+            className="text-gray-500 hover:bg-gray-100"
           >
             <X className="w-4 h-4" />
           </Button>
         </div>
         
-        <NavMenu orientation="vertical" className="mb-8 [&>div]:h-full" />
+        <NavMenu orientation="vertical" />
         
-        <div className="flex flex-col gap-4 mt-8 pt-8 border-t border-tvec-blue/30">
+        <div className="flex flex-col gap-4 mt-8 pt-8 border-t border-gray-200">
           <Button
-            variant="outline"
+            variant="default"
             onClick={handleContactClick}
-            className="w-full rounded-full border-tvec-blue/50 text-white hover:text-tvec-yellow hover:bg-tvec-blue/20 hover:border-tvec-yellow/50 transition-all duration-300 group"
+            className="w-full bg-tvec-green text-white hover:bg-tvec-green/90"
           >
-            <span className="group-hover:lightning-glow transition-all duration-300">Contact</span>
-          </Button>
-          <Button 
-            onClick={handleQuoteClick}
-            className="w-full rounded-full bg-gradient-to-r from-tvec-blue to-tvec-blue-light hover:from-tvec-blue-light hover:to-tvec-yellow text-white border-0 electric-glow hover:scale-105 transition-all duration-300 group"
-          >
-            <span className="group-hover:animate-pulse">Devis Gratuit</span>
+            Contact
           </Button>
         </div>
       </SheetContent>

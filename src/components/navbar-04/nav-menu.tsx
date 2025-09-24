@@ -12,11 +12,9 @@ const navItems = [
   { id: 'apropos', label: 'À Propos', href: '#about' },
   { id: 'technologie', label: 'Technologie', href: '#technology' },
   { id: 'solutions', label: 'Solutions', href: '#solutions' },
-  { id: 'galerie', label: 'Galerie', href: '#gallery' },
-  { id: 'financement', label: 'Financement', href: '#financing' },
+  { id: 'projets', label: 'Projets', href: '#projects' },
   { id: 'gouvernements', label: 'Gouvernements', href: '#gouvernements' },
   { id: 'partenaires', label: 'Partenaires', href: '#partners' },
-  { id: 'contact', label: 'Contact', href: '#contact' },
 ];
 
 export const NavMenu = (props: ComponentProps<typeof NavigationMenu>) => {
@@ -51,7 +49,7 @@ export const NavMenu = (props: ComponentProps<typeof NavigationMenu>) => {
 
   return (
     <NavigationMenu {...props}>
-      <NavigationMenuList className="gap-1 space-x-0 data-[orientation=vertical]:flex-col data-[orientation=vertical]:items-start data-[orientation=vertical]:justify-start">
+      <NavigationMenuList className="gap-1">
         {navItems.map((item) => {
           const isActive = activeSection === item.href.substring(1);
           return (
@@ -59,18 +57,13 @@ export const NavMenu = (props: ComponentProps<typeof NavigationMenu>) => {
               <NavigationMenuLink asChild>
                 <button
                   onClick={() => handleNavClick(item.href)}
-                  className={`relative px-4 py-2 rounded-lg font-medium transition-all duration-300 hover:scale-105 group ${
+                  className={`px-4 py-2 rounded-md text-sm font-medium transition-colors ${
                     isActive 
-                      ? 'text-blue-300 bg-tvec-blue/20 shadow-professional electric-glow lightning-border' 
-                      : 'text-white hover:text-blue-300 hover:bg-tvec-blue/10'
+                      ? 'text-tvec-green' 
+                      : 'text-tvec-navy hover:text-tvec-green'
                   }`}
                 >
                   {item.label}
-                  {isActive && (
-                    <span className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-2 h-0.5 bg-blue-300 rounded-full lightning-glow animate-pulse"></span>
-                  )}
-                  {/* Electrical hover effect */}
-                  <div className="absolute inset-0 bg-gradient-to-r from-tvec-blue/10 to-blue-300/10 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 -z-10"></div>
                 </button>
               </NavigationMenuLink>
             </NavigationMenuItem>
