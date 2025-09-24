@@ -63,31 +63,31 @@ export function ProjectsSection() {
         </div>
 
         {/* EPC Promise */}
-        <div className="bg-gradient-to-r from-tvec-green to-green-600 rounded-2xl p-8 md:p-12 mb-16 text-white">
+        <div className="bg-white rounded-2xl p-8 md:p-12 mb-16 shadow-lg border border-gray-100">
           <div className="text-center mb-8">
-            <h3 className="text-3xl font-bold mb-4">Notre Engagement EPC</h3>
-            <p className="text-lg text-green-100 max-w-2xl mx-auto">
+            <h3 className="text-3xl font-bold text-tvec-navy mb-4">Notre Engagement EPC</h3>
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
               Nous prenons en charge l&apos;intégralité de vos projets, de la conception 
               à la mise en service, en assumant tous les risques techniques et financiers.
             </p>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div className="text-center">
-              <Building2 className="w-12 h-12 mx-auto mb-4 text-tvec-yellow" />
-              <h4 className="font-semibold mb-2">Engineering</h4>
-              <p className="text-sm text-green-100">Conception technique complète</p>
-            </div>
-            <div className="text-center">
-              <DollarSign className="w-12 h-12 mx-auto mb-4 text-tvec-yellow" />
-              <h4 className="font-semibold mb-2">Procurement</h4>
-              <p className="text-sm text-green-100">Approvisionnement optimisé</p>
-            </div>
-            <div className="text-center">
-              <CheckCircle className="w-12 h-12 mx-auto mb-4 text-tvec-yellow" />
-              <h4 className="font-semibold mb-2">Construction</h4>
-              <p className="text-sm text-green-100">Installation et mise en service</p>
-            </div>
+            <Card className="text-center p-6 border-2 border-gray-100">
+              <Building2 className="w-12 h-12 mx-auto mb-4 text-tvec-green" />
+              <h4 className="font-semibold text-tvec-navy mb-2">Engineering</h4>
+              <p className="text-sm text-gray-600">Conception technique complète</p>
+            </Card>
+            <Card className="text-center p-6 border-2 border-gray-100">
+              <DollarSign className="w-12 h-12 mx-auto mb-4 text-tvec-green" />
+              <h4 className="font-semibold text-tvec-navy mb-2">Procurement</h4>
+              <p className="text-sm text-gray-600">Approvisionnement optimisé</p>
+            </Card>
+            <Card className="text-center p-6 border-2 border-gray-100">
+              <CheckCircle className="w-12 h-12 mx-auto mb-4 text-tvec-green" />
+              <h4 className="font-semibold text-tvec-navy mb-2">Construction</h4>
+              <p className="text-sm text-gray-600">Installation et mise en service</p>
+            </Card>
           </div>
         </div>
 
@@ -171,32 +171,32 @@ export function ProjectsSection() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             <div className="text-center">
-              <div className="bg-tvec-navy w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Clock className="w-8 h-8 text-white" />
+              <div className="bg-gray-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Clock className="w-8 h-8 text-tvec-green" />
               </div>
               <h4 className="font-semibold text-tvec-navy mb-2">Délais Garantis</h4>
               <p className="text-sm text-gray-600">Respect strict des planning</p>
             </div>
 
             <div className="text-center">
-              <div className="bg-tvec-green w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                <DollarSign className="w-8 h-8 text-white" />
+              <div className="bg-gray-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                <DollarSign className="w-8 h-8 text-tvec-green" />
               </div>
               <h4 className="font-semibold text-tvec-navy mb-2">Budget Maîtrisé</h4>
               <p className="text-sm text-gray-600">Prix fixe sans dépassement</p>
             </div>
 
             <div className="text-center">
-              <div className="bg-tvec-yellow w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                <CheckCircle className="w-8 h-8 text-tvec-navy" />
+              <div className="bg-gray-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                <CheckCircle className="w-8 h-8 text-tvec-green" />
               </div>
               <h4 className="font-semibold text-tvec-navy mb-2">Qualité Assurée</h4>
               <p className="text-sm text-gray-600">Standards internationaux</p>
             </div>
 
             <div className="text-center">
-              <div className="bg-tvec-navy w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Users className="w-8 h-8 text-white" />
+              <div className="bg-gray-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Users className="w-8 h-8 text-tvec-green" />
               </div>
               <h4 className="font-semibold text-tvec-navy mb-2">Support Complet</h4>
               <p className="text-sm text-gray-600">Accompagnement continu</p>

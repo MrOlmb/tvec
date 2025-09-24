@@ -11,11 +11,10 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Logo and Description */}
           <div className="md:col-span-2">
-            <div className="flex items-center space-x-2 mb-4 group">
-              <div className="relative">
-                <span className="text-2xl font-bold text-tvec-green group-hover:text-white transition-colors duration-300">TVEC</span>
-                <Zap className="absolute -top-1 -right-1 w-4 h-4 text-tvec-yellow animate-pulse" />
-              </div>
+            <div className="flex items-center space-x-2 mb-4 group cursor-pointer">
+              <span className="text-2xl font-bold text-white transition-all duration-300 relative flex items-center">
+                T<span className="relative flex items-center">V<Zap fill="#f59e0b" stroke="none" className="absolute -right-1 w-5 h-10 transition-all duration-300 animate-bounce group-hover:animate-pulse group-hover:scale-110" style={{animationDelay: '0s', animationDuration: '2s'}} /></span>EC
+              </span>
             </div>
             <p className="text-tvec-yellow font-semibold mb-2 uppercase tracking-wide">
               FOURNISSEURS DE SOLUTIONS RÉSEAUX ÉLECTRIQUES
@@ -49,8 +48,13 @@ export function Footer() {
                 </a>
               </li>
               <li>
-                <a href="#projects" className="text-gray-300 hover:text-tvec-yellow transition-all duration-300 hover:translate-x-1 inline-block">
-                  Projets
+                <a href="#gouvernements" className="text-gray-300 hover:text-tvec-yellow transition-all duration-300 hover:translate-x-1 inline-block">
+                  Gouvernements
+                </a>
+              </li>
+              <li>
+                <a href="#partners" className="text-gray-300 hover:text-tvec-yellow transition-all duration-300 hover:translate-x-1 inline-block">
+                  Partenaires
                 </a>
               </li>
             </ul>
@@ -68,20 +72,20 @@ export function Footer() {
                   <MapPin className="w-4 h-4 text-tvec-yellow" />
                 </div>
                 <span className="text-gray-300 text-sm leading-relaxed">
-                  Kinshasa, République Démocratique du Congo
+                  Brazzaville, République du Congo
                 </span>
               </div>
               <div className="flex items-center space-x-3 group">
                 <div className="p-1 rounded bg-tvec-yellow/10 group-hover:bg-tvec-yellow/20 transition-colors">
                   <Phone className="w-4 h-4 text-tvec-yellow" />
                 </div>
-                <span className="text-gray-300 text-sm">+243 XXX XXX XXX</span>
+                <span className="text-gray-300 text-sm">+242 XXX XXX XXX</span>
               </div>
               <div className="flex items-center space-x-3 group">
                 <div className="p-1 rounded bg-tvec-yellow/10 group-hover:bg-tvec-yellow/20 transition-colors">
                   <Mail className="w-4 h-4 text-tvec-yellow" />
                 </div>
-                <span className="text-gray-300 text-sm">contact@tvec.cd</span>
+                <span className="text-gray-300 text-sm">contact@tvec.cg</span>
               </div>
             </div>
           </div>

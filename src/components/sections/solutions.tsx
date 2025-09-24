@@ -1,6 +1,8 @@
 import { Search, BarChart3, Wrench, Shield, Zap, TrendingUp } from 'lucide-react';
 import { Card } from '@/components/ui/card';
 import { ServiceFeature } from '@/types';
+import { SlideIn, StaggeredSlideIn, SlideCard } from '@/components/animations/SlideIn';
+import { FadeIn } from '@/components/animations/FadeIn';
 
 const solutions: ServiceFeature[] = [
   {
@@ -46,110 +48,104 @@ export function SolutionsSection() {
         </div>
 
         {/* Main Solutions Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+        <StaggeredSlideIn 
+          stagger={0.12} 
+          direction="up" 
+          containerClassName="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16"
+        >
           {solutions.map((solution, index) => {
             const icons = [Search, TrendingUp, Wrench, BarChart3, Zap, Shield];
             const IconComponent = icons[index % icons.length];
             
             return (
-              <Card key={index} className="p-6 bg-white border-2 border-gray-100 hover:border-tvec-green transition-all duration-300 hover:scale-105 group">
-                <div className="flex items-center justify-center w-12 h-12 bg-tvec-green/10 rounded-lg mb-4 group-hover:bg-tvec-green group-hover:text-white transition-colors duration-300">
-                  <IconComponent className="w-6 h-6 text-tvec-green group-hover:text-white" />
-                </div>
-                <h3 className="text-xl font-semibold text-tvec-navy mb-3">
-                  {solution.title}
-                </h3>
-                <p className="text-gray-600 leading-relaxed">
-                  {solution.description}
-                </p>
-              </Card>
+              <SlideCard key={index} hoverDirection="up" hoverDistance="10px">
+                <Card className="p-6 bg-white border-2 border-gray-100 hover:border-tvec-green transition-all duration-300 hover:shadow-xl group">
+                  <div className="flex items-center justify-center w-12 h-12 bg-tvec-green/10 rounded-lg mb-4 group-hover:bg-tvec-green group-hover:text-white transition-colors duration-300">
+                    <IconComponent className="w-6 h-6 text-tvec-green group-hover:text-white" />
+                  </div>
+                  <h3 className="text-xl font-semibold text-tvec-navy mb-3">
+                    {solution.title}
+                  </h3>
+                  <p className="text-gray-600 leading-relaxed">
+                    {solution.description}
+                  </p>
+                </Card>
+              </SlideCard>
             );
           })}
-        </div>
+        </StaggeredSlideIn>
 
         {/* Process Flow */}
-        <div className="bg-white rounded-2xl p-8 md:p-12 shadow-lg">
-          <h3 className="text-3xl font-bold text-tvec-navy text-center mb-12">
-            Notre Processus d&apos;Intervention
-          </h3>
-          
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-            {/* Step 1 */}
-            <div className="text-center">
-              <div className="bg-tvec-green w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-white font-bold text-xl">1</span>
-              </div>
-              <h4 className="text-lg font-semibold text-tvec-navy mb-2">Évaluation</h4>
-              <p className="text-gray-600 text-sm">
-                Analyse complète de votre infrastructure existante
-              </p>
+        <SlideIn direction="up" delay={0.2}>
+          <SlideCard className="bg-white rounded-2xl shadow-lg hover:shadow-xl">
+            <div className="p-8 md:p-12">
+              <FadeIn delay={0.4}>
+                <h3 className="text-3xl font-bold text-tvec-navy text-center mb-12">
+                  Notre Processus d&apos;Intervention
+                </h3>
+              </FadeIn>
+              
+              <StaggeredSlideIn 
+                stagger={0.2} 
+                direction="up" 
+                containerClassName="grid grid-cols-1 md:grid-cols-4 gap-8"
+              >
+                {[
+                  { step: "1", title: "Évaluation", desc: "Analyse complète de votre infrastructure existante" },
+                  { step: "2", title: "Planification", desc: "Conception de la solution optimale pour vos besoins" },
+                  { step: "3", title: "Implémentation", desc: "Installation et mise en service sans interruption" },
+                  { step: "4", title: "Suivi", desc: "Maintenance et support continu" }
+                ].map((item, index) => (
+                  <div key={index} className="text-center">
+                    <div className="bg-gray-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 hover:bg-tvec-green hover:text-white transition-colors duration-300">
+                      <span className="text-tvec-green font-bold text-xl hover:text-white">{item.step}</span>
+                    </div>
+                    <h4 className="text-lg font-semibold text-tvec-navy mb-2">{item.title}</h4>
+                    <p className="text-gray-600 text-sm">{item.desc}</p>
+                  </div>
+                ))}
+              </StaggeredSlideIn>
             </div>
-
-            {/* Step 2 */}
-            <div className="text-center">
-              <div className="bg-tvec-navy w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-white font-bold text-xl">2</span>
-              </div>
-              <h4 className="text-lg font-semibold text-tvec-navy mb-2">Planification</h4>
-              <p className="text-gray-600 text-sm">
-                Conception de la solution optimale pour vos besoins
-              </p>
-            </div>
-
-            {/* Step 3 */}
-            <div className="text-center">
-              <div className="bg-tvec-yellow w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-tvec-navy font-bold text-xl">3</span>
-              </div>
-              <h4 className="text-lg font-semibold text-tvec-navy mb-2">Implémentation</h4>
-              <p className="text-gray-600 text-sm">
-                Installation et mise en service sans interruption
-              </p>
-            </div>
-
-            {/* Step 4 */}
-            <div className="text-center">
-              <div className="bg-tvec-green w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-white font-bold text-xl">4</span>
-              </div>
-              <h4 className="text-lg font-semibold text-tvec-navy mb-2">Suivi</h4>
-              <p className="text-gray-600 text-sm">
-                Maintenance et support continu
-              </p>
-            </div>
-          </div>
-        </div>
+          </SlideCard>
+        </SlideIn>
 
         {/* Key Benefits Summary */}
-        <div className="mt-16 bg-gradient-to-r from-tvec-navy to-blue-900 rounded-2xl p-8 md:p-12 text-white">
-          <div className="text-center mb-8">
-            <h3 className="text-3xl font-bold mb-4">
-              Pourquoi Choisir TVEC ?
-            </h3>
-            <p className="text-gray-200 text-lg">
-              Nos solutions apportent des avantages concrets et mesurables
-            </p>
-          </div>
+        <SlideIn direction="up" delay={0.3}>
+          <SlideCard className="mt-16 bg-white rounded-2xl shadow-lg border border-gray-100 hover:shadow-xl">
+            <div className="p-8 md:p-12">
+              <FadeIn delay={0.5}>
+                <div className="text-center mb-8">
+                  <h3 className="text-3xl font-bold text-tvec-navy mb-4">
+                    Pourquoi Choisir TVEC ?
+                  </h3>
+                  <p className="text-gray-600 text-lg">
+                    Nos solutions apportent des avantages concrets et mesurables
+                  </p>
+                </div>
+              </FadeIn>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            <div className="text-center">
-              <div className="text-3xl font-bold text-tvec-yellow mb-2">4X</div>
-              <div className="text-sm text-gray-200">Plus de capacité</div>
+              <StaggeredSlideIn 
+                stagger={0.1} 
+                direction="up" 
+                containerClassName="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6"
+              >
+                {[
+                  { value: "4X", label: "Plus de capacité" },
+                  { value: "75%", label: "Économies réalisées" },
+                  { value: "0", label: "Interruption de service" },
+                  { value: "24/7", label: "Support technique" }
+                ].map((benefit, index) => (
+                  <SlideCard key={index} hoverDirection="up" hoverDistance="8px">
+                    <Card className="text-center p-6 border-2 border-gray-100 hover:border-tvec-green transition-all duration-300 hover:shadow-lg">
+                      <div className="text-3xl font-bold text-tvec-green mb-2">{benefit.value}</div>
+                      <div className="text-sm text-gray-600">{benefit.label}</div>
+                    </Card>
+                  </SlideCard>
+                ))}
+              </StaggeredSlideIn>
             </div>
-            <div className="text-center">
-              <div className="text-3xl font-bold text-tvec-green mb-2">75%</div>
-              <div className="text-sm text-gray-200">Économies réalisées</div>
-            </div>
-            <div className="text-center">
-              <div className="text-3xl font-bold text-tvec-yellow mb-2">0</div>
-              <div className="text-sm text-gray-200">Interruption de service</div>
-            </div>
-            <div className="text-center">
-              <div className="text-3xl font-bold text-tvec-green mb-2">24/7</div>
-              <div className="text-sm text-gray-200">Support technique</div>
-            </div>
-          </div>
-        </div>
+          </SlideCard>
+        </SlideIn>
       </div>
     </section>
   );

@@ -59,13 +59,13 @@ export function FinancingSection() {
         </div>
 
         {/* Financing Promise */}
-        <div className="bg-gradient-to-r from-tvec-navy to-blue-900 rounded-2xl p-8 md:p-12 mb-16 text-white">
+        <div className="bg-white rounded-2xl p-8 md:p-12 mb-16 shadow-lg border border-gray-100">
           <div className="text-center mb-8">
-            <Banknote className="w-16 h-16 text-tvec-yellow mx-auto mb-6" />
-            <h3 className="text-3xl font-bold mb-4">
+            <Banknote className="w-16 h-16 text-tvec-green mx-auto mb-6" />
+            <h3 className="text-3xl font-bold text-tvec-navy mb-4">
               Solutions de Financement Exceptionnelles
             </h3>
-            <p className="text-lg text-gray-200 max-w-2xl mx-auto">
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
               Notre réseau de partenaires financiers nous permet de proposer 
               des solutions de financement adaptées à tous vos projets, 
               quelle que soit leur envergure.
@@ -73,21 +73,21 @@ export function FinancingSection() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="text-center">
-              <div className="text-4xl font-bold text-tvec-yellow mb-2">100%</div>
-              <div className="text-tvec-green font-semibold mb-1">Financement</div>
-              <div className="text-sm text-gray-300">De votre projet</div>
-            </div>
-            <div className="text-center">
+            <Card className="text-center p-6 border-2 border-gray-100">
+              <div className="text-4xl font-bold text-tvec-green mb-2">100%</div>
+              <div className="text-tvec-navy font-semibold mb-1">Financement</div>
+              <div className="text-sm text-gray-600">De votre projet</div>
+            </Card>
+            <Card className="text-center p-6 border-2 border-gray-100">
               <div className="text-4xl font-bold text-tvec-green mb-2">25</div>
-              <div className="text-tvec-yellow font-semibold mb-1">Années</div>
-              <div className="text-sm text-gray-300">Durée maximale</div>
-            </div>
-            <div className="text-center">
-              <div className="text-4xl font-bold text-tvec-yellow mb-2">48h</div>
-              <div className="text-tvec-green font-semibold mb-1">Réponse</div>
-              <div className="text-sm text-gray-300">Délai de traitement</div>
-            </div>
+              <div className="text-tvec-navy font-semibold mb-1">Années</div>
+              <div className="text-sm text-gray-600">Durée maximale</div>
+            </Card>
+            <Card className="text-center p-6 border-2 border-gray-100">
+              <div className="text-4xl font-bold text-tvec-green mb-2">48h</div>
+              <div className="text-tvec-navy font-semibold mb-1">Réponse</div>
+              <div className="text-sm text-gray-600">Délai de traitement</div>
+            </Card>
           </div>
         </div>
 
@@ -148,8 +148,8 @@ export function FinancingSection() {
           
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             <div className="text-center">
-              <div className="bg-tvec-green w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-white font-bold text-xl">1</span>
+              <div className="bg-gray-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                <span className="text-tvec-green font-bold text-xl">1</span>
               </div>
               <h4 className="text-lg font-semibold text-tvec-navy mb-2">
                 Analyse du Projet
@@ -160,8 +160,8 @@ export function FinancingSection() {
             </div>
 
             <div className="text-center">
-              <div className="bg-tvec-navy w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-white font-bold text-xl">2</span>
+              <div className="bg-gray-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                <span className="text-tvec-green font-bold text-xl">2</span>
               </div>
               <h4 className="text-lg font-semibold text-tvec-navy mb-2">
                 Structuration
@@ -172,8 +172,8 @@ export function FinancingSection() {
             </div>
 
             <div className="text-center">
-              <div className="bg-tvec-yellow w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-tvec-navy font-bold text-xl">3</span>
+              <div className="bg-gray-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                <span className="text-tvec-green font-bold text-xl">3</span>
               </div>
               <h4 className="text-lg font-semibold text-tvec-navy mb-2">
                 Négociation
@@ -184,8 +184,8 @@ export function FinancingSection() {
             </div>
 
             <div className="text-center">
-              <div className="bg-tvec-green w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-white font-bold text-xl">4</span>
+              <div className="bg-gray-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                <span className="text-tvec-green font-bold text-xl">4</span>
               </div>
               <h4 className="text-lg font-semibold text-tvec-navy mb-2">
                 Déblocage

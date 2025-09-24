@@ -18,49 +18,49 @@ export function PartnersSection() {
         </div>
 
         {/* Government Support */}
-        <div className="bg-gradient-to-r from-tvec-navy to-blue-900 rounded-2xl p-8 md:p-12 mb-16 text-white">
+        <div className="bg-white rounded-2xl p-8 md:p-12 mb-16 shadow-lg border border-gray-100">
           <div className="text-center mb-8">
-            <Award className="w-16 h-16 text-tvec-yellow mx-auto mb-6" />
-            <h3 className="text-3xl font-bold mb-4">
+            <Award className="w-16 h-16 text-tvec-green mx-auto mb-6" />
+            <h3 className="text-3xl font-bold text-tvec-navy mb-4">
               Soutien Gouvernemental
             </h3>
-            <p className="text-lg text-gray-200 max-w-2xl mx-auto">
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
               Notre mission s&apos;aligne parfaitement avec les objectifs de développement 
               du gouvernement congolais pour moderniser l&apos;infrastructure électrique nationale.
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div className="text-center">
-              <Users className="w-12 h-12 text-tvec-yellow mx-auto mb-4" />
-              <h4 className="font-semibold mb-2">Mission Alignée</h4>
-              <p className="text-sm text-gray-300">
+            <Card className="text-center p-6 border-2 border-gray-100">
+              <Users className="w-12 h-12 text-tvec-green mx-auto mb-4" />
+              <h4 className="font-semibold text-tvec-navy mb-2">Mission Alignée</h4>
+              <p className="text-sm text-gray-600">
                 Objectifs communs de développement énergétique
               </p>
-            </div>
-            <div className="text-center">
-              <Handshake className="w-12 h-12 text-tvec-yellow mx-auto mb-4" />
-              <h4 className="font-semibold mb-2">Collaboration Étroite</h4>
-              <p className="text-sm text-gray-300">
+            </Card>
+            <Card className="text-center p-6 border-2 border-gray-100">
+              <Handshake className="w-12 h-12 text-tvec-green mx-auto mb-4" />
+              <h4 className="font-semibold text-tvec-navy mb-2">Collaboration Étroite</h4>
+              <p className="text-sm text-gray-600">
                 Partenariat stratégique avec les institutions
               </p>
-            </div>
-            <div className="text-center">
-              <CheckCircle className="w-12 h-12 text-tvec-yellow mx-auto mb-4" />
-              <h4 className="font-semibold mb-2">Validation Officielle</h4>
-              <p className="text-sm text-gray-300">
+            </Card>
+            <Card className="text-center p-6 border-2 border-gray-100">
+              <CheckCircle className="w-12 h-12 text-tvec-green mx-auto mb-4" />
+              <h4 className="font-semibold text-tvec-navy mb-2">Validation Officielle</h4>
+              <p className="text-sm text-gray-600">
                 Reconnaissance et soutien des autorités
               </p>
-            </div>
+            </Card>
           </div>
         </div>
 
         {/* CTC Global Partnership */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">
-          <Card className="p-8 border-2 border-tvec-green">
+          <Card className="p-8 border-2 border-gray-100">
             <div className="text-center mb-6">
-              <div className="bg-tvec-green w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Globe className="w-10 h-10 text-white" />
+              <div className="bg-gray-100 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Globe className="w-10 h-10 text-tvec-green" />
               </div>
               <h3 className="text-2xl font-bold text-tvec-navy mb-2">CTC Global</h3>
               <p className="text-tvec-green font-semibold">Partenaire Technologique Principal</p>
@@ -75,29 +75,29 @@ export function PartnersSection() {
               
               <div className="space-y-2">
                 <div className="flex items-center">
-                  <Star className="w-4 h-4 text-tvec-yellow mr-2" />
+                  <CheckCircle className="w-4 h-4 text-tvec-green mr-2" />
                   <span className="text-sm text-gray-700">Sélectionné par Google pour ses projets</span>
                 </div>
                 <div className="flex items-center">
-                  <Star className="w-4 h-4 text-tvec-yellow mr-2" />
+                  <CheckCircle className="w-4 h-4 text-tvec-green mr-2" />
                   <span className="text-sm text-gray-700">Plus de 20 ans d&apos;innovation</span>
                 </div>
                 <div className="flex items-center">
-                  <Star className="w-4 h-4 text-tvec-yellow mr-2" />
+                  <CheckCircle className="w-4 h-4 text-tvec-green mr-2" />
                   <span className="text-sm text-gray-700">Technologie dans 65 pays</span>
                 </div>
                 <div className="flex items-center">
-                  <Star className="w-4 h-4 text-tvec-yellow mr-2" />
+                  <CheckCircle className="w-4 h-4 text-tvec-green mr-2" />
                   <span className="text-sm text-gray-700">1,350+ lignes équipées</span>
                 </div>
               </div>
             </div>
           </Card>
 
-          <Card className="p-8 border-2 border-tvec-navy">
+          <Card className="p-8 border-2 border-gray-100">
             <div className="text-center mb-6">
-              <div className="bg-tvec-navy w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Award className="w-10 h-10 text-white" />
+              <div className="bg-gray-100 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Award className="w-10 h-10 text-tvec-green" />
               </div>
               <h3 className="text-2xl font-bold text-tvec-navy mb-2">Electra Power</h3>
               <p className="text-tvec-navy font-semibold">Partenaire Implémentation</p>
@@ -140,8 +140,8 @@ export function PartnersSection() {
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             <div className="text-center">
-              <div className="bg-tvec-green w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Globe className="w-8 h-8 text-white" />
+              <div className="bg-gray-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Globe className="w-8 h-8 text-tvec-green" />
               </div>
               <h4 className="text-lg font-semibold text-tvec-navy mb-2">
                 Technologie Mondiale
@@ -152,8 +152,8 @@ export function PartnersSection() {
             </div>
 
             <div className="text-center">
-              <div className="bg-tvec-navy w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Award className="w-8 h-8 text-white" />
+              <div className="bg-gray-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Award className="w-8 h-8 text-tvec-green" />
               </div>
               <h4 className="text-lg font-semibold text-tvec-navy mb-2">
                 Expertise Reconnue
@@ -164,8 +164,8 @@ export function PartnersSection() {
             </div>
 
             <div className="text-center">
-              <div className="bg-tvec-yellow w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Users className="w-8 h-8 text-tvec-navy" />
+              <div className="bg-gray-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Users className="w-8 h-8 text-tvec-green" />
               </div>
               <h4 className="text-lg font-semibold text-tvec-navy mb-2">
                 Support Complet
@@ -176,8 +176,8 @@ export function PartnersSection() {
             </div>
 
             <div className="text-center">
-              <div className="bg-tvec-green w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Handshake className="w-8 h-8 text-white" />
+              <div className="bg-gray-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Handshake className="w-8 h-8 text-tvec-green" />
               </div>
               <h4 className="text-lg font-semibold text-tvec-navy mb-2">
                 Garantie Qualité

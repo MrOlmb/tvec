@@ -62,7 +62,7 @@ export function ContactSection() {
           <div className="w-24 h-1 bg-tvec-yellow mx-auto mb-6 animate-scale-in" style={{animationDelay: '400ms'}}></div>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
             Prêt à transformer votre infrastructure électrique ? 
-            Contactez nos experts pour une consultation gratuite.
+            Contactez nos experts.
           </p>
         </div>
 
@@ -85,9 +85,9 @@ export function ContactSection() {
                     Adresse du Bureau
                   </h4>
                   <p className="text-gray-600">
-                    Avenue de la Libération<br />
-                    Commune de Kinshasa<br />
-                    République Démocratique du Congo
+                    05 rue Louis-Trechot, Poto-Poto<br />
+                    Brazzaville<br />
+                    République du Congo
                   </p>
                 </div>
               </div>
@@ -104,8 +104,7 @@ export function ContactSection() {
                     Téléphone
                   </h4>
                   <p className="text-gray-600">
-                    +243 XXX XXX XXX<br />
-                    +243 XXX XXX XXX (Urgences)
+                    +242 XXX XXX XXX<br />
                   </p>
                 </div>
               </div>
@@ -122,8 +121,8 @@ export function ContactSection() {
                     Email
                   </h4>
                   <p className="text-gray-600">
-                    contact@tvec.cd<br />
-                    commercial@tvec.cd
+                    contact@tvec.cg<br />
+                    commercial@tvec.cg
                   </p>
                 </div>
               </div>

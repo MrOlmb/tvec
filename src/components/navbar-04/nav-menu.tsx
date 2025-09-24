@@ -12,7 +12,6 @@ const navItems = [
   { id: 'apropos', label: 'À Propos', href: '#about' },
   { id: 'technologie', label: 'Technologie', href: '#technology' },
   { id: 'solutions', label: 'Solutions', href: '#solutions' },
-  { id: 'projets', label: 'Projets', href: '#projects' },
   { id: 'gouvernements', label: 'Gouvernements', href: '#gouvernements' },
   { id: 'partenaires', label: 'Partenaires', href: '#partners' },
 ];

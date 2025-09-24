@@ -2,17 +2,18 @@ import { Zap, TrendingUp, Clock, Shield, CheckCircle } from 'lucide-react';
 import { Card } from '@/components/ui/card';
 import { ImageGrid } from '@/components/ui/image-grid';
 import { CompanyStat } from '@/types';
+import { SlideIn, StaggeredSlideIn, SlideCard } from '@/components/animations/SlideIn';
 
 const stats: CompanyStat[] = [
   {
-    value: "4X",
+    value: "2 à 4X",
     label: "Plus de capacité",
     description: "que les solutions existantes"
   },
   {
-    value: "25%",
-    label: "Coût réduit",
-    description: "par rapport à une nouvelle ligne"
+    value: "75%",
+    label: "Réduction des coûts",
+    description: "reconduction des lignes"
   },
   {
     value: "1,350+",
@@ -30,21 +31,21 @@ export function AboutSection() {
   const companyImages = [
     {
       id: '1',
-      src: '/power-grid-1.jpeg',
-      alt: 'Équipe TVEC sur le terrain',
-      title: 'Notre équipe d\'experts'
+      src: '/project-1.png',
+      alt: 'Techno utilisée',
+      title: 'Conducteurs ACCC ultra modernes'
     },
     {
       id: '2', 
-      src: '/project-1.png',
-      alt: 'Bureau TVEC Kinshasa',
-      title: 'Nos bureaux à Kinshasa'
+      src: '/silhouette.jpg',
+      alt: 'Technicien TVEC',
+      title: 'Une equipe qualifiée'
     },
     {
       id: '3',
-      src: '/power-grid-2.jpeg', 
-      alt: 'Formation technique',
-      title: 'Formation continue'
+      src: '/high_voltage_power_lines.jpg', 
+      alt: 'Resultats satisfaisants',
+      title: 'Des resultats satisfaisants'
     }
   ];
 
@@ -59,81 +60,95 @@ export function AboutSection() {
           <div className="w-24 h-1 bg-tvec-yellow mx-auto mb-6"></div>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Transport Vert d&apos;Électricité au Congo - Pionnier des solutions 
-            électriques durables et innovantes en République Démocratique du Congo.
+            électriques durables et innovantes en République du Congo.
           </p>
         </div>
 
         {/* Main Content */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-16">
           {/* Description */}
-          <div>
-            <h3 className="text-3xl font-bold text-tvec-navy mb-6">
-              Excellence et Innovation
-            </h3>
-            <div className="space-y-6 text-gray-600 text-lg">
-              <p>
-                TVEC est votre partenaire de confiance pour les solutions de transport 
-                d&apos;électricité au Congo. Nous nous spécialisons dans l&apos;implémentation 
-                de technologies de pointe qui révolutionnent la transmission électrique.
-              </p>
-              <p>
-                Notre expertise s&apos;appuie sur un partenariat stratégique avec CTC Global, 
-                leader mondial en conducteurs haute performance, permettant de transporter 
-                jusqu&apos;à 4 fois plus d&apos;électricité sans interruption de service.
-              </p>
-              <p>
-                Avec une technologie éprouvée dans 65 pays sur plus de 1,350 lignes 
-                de transmission, nous offrons des solutions fiables, économiques et 
-                respectueuses de l&apos;environnement.
-              </p>
+          <SlideIn direction="left" delay={0.2}>
+            <div>
+              <h3 className="text-3xl font-bold text-tvec-navy mb-6">
+                Excellence et Innovation
+              </h3>
+              <div className="space-y-6 text-gray-600 text-lg">
+                <p>
+                  TVEC est votre partenaire de confiance pour les solutions de transport 
+                  d&apos;électricité au Congo. Nous nous spécialisons dans l&apos;implémentation 
+                  de technologies de pointe qui révolutionnent la transmission électrique.
+                </p>
+                <p>
+                  Notre expertise s&apos;appuie sur un partenariat stratégique avec <b>CTC Global</b>, 
+                  leader mondial en conducteurs haute performance, permettant de transporter 
+                  jusqu&apos;à 4 fois plus d&apos;électricité sans interruption de service.
+                </p>
+                <p>
+                  Avec une technologie éprouvée dans 65 pays sur plus de 1,350 lignes 
+                  de transmission, nous offrons des solutions fiables, économiques et 
+                  respectueuses de l&apos;environnement.
+                </p>
+              </div>
             </div>
-          </div>
+          </SlideIn>
 
           {/* Mission & Values */}
-          <Card className="p-8 border-2 border-gray-100">
-            <h3 className="text-2xl font-bold text-tvec-navy mb-4">Notre Mission</h3>
-            <p className="text-gray-600 mb-6">
-              Fournir des solutions électriques innovantes qui permettent au Congo 
-              de développer une infrastructure énergétique moderne, durable et efficace.
-            </p>
-            
-            <h4 className="text-xl font-semibold text-tvec-green mb-4">Nos Valeurs</h4>
-            <ul className="space-y-3 text-gray-600">
-              <li className="flex items-center"><CheckCircle className="w-5 h-5 text-tvec-green mr-3" />Excellence technique</li>
-              <li className="flex items-center"><CheckCircle className="w-5 h-5 text-tvec-green mr-3" />Durabilité environnementale</li>
-              <li className="flex items-center"><CheckCircle className="w-5 h-5 text-tvec-green mr-3" />Innovation continue</li>
-              <li className="flex items-center"><CheckCircle className="w-5 h-5 text-tvec-green mr-3" />Partenariat de confiance</li>
-            </ul>
-          </Card>
+          <SlideIn direction="right" delay={0.4}>
+            <SlideCard className="hover:border-tvec-green">
+              <Card className="p-8 border-2 border-gray-100 transition-all duration-300">
+                <h3 className="text-2xl font-bold text-tvec-navy mb-4">Notre Mission</h3>
+                <p className="text-gray-600 mb-6">
+                  Fournir des solutions électriques innovantes qui permettent au Congo 
+                  de développer une infrastructure énergétique moderne, durable et efficace.
+                </p>
+                
+                <h4 className="text-xl font-semibold text-tvec-green mb-4">Nos Valeurs</h4>
+                <ul className="space-y-3 text-gray-600">
+                  <li className="flex items-center"><CheckCircle className="w-5 h-5 text-tvec-green mr-3" />Excellence technique</li>
+                  <li className="flex items-center"><CheckCircle className="w-5 h-5 text-tvec-green mr-3" />Durabilité environnementale</li>
+                  <li className="flex items-center"><CheckCircle className="w-5 h-5 text-tvec-green mr-3" />Innovation continue</li>
+                  <li className="flex items-center"><CheckCircle className="w-5 h-5 text-tvec-green mr-3" />Partenariat de confiance</li>
+                </ul>
+              </Card>
+            </SlideCard>
+          </SlideIn>
         </div>
 
         {/* Statistics */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
+        <StaggeredSlideIn 
+          stagger={0.15} 
+          direction="up" 
+          containerClassName="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16"
+        >
           {stats.map((stat, index) => (
-            <Card key={index} className="text-center p-6 border-2 border-gray-100 hover:border-tvec-green transition-all duration-300">
-              <div className="text-4xl font-bold text-tvec-green mb-2">
-                {stat.value}
-              </div>
-              <div className="text-lg font-semibold text-tvec-navy mb-1">
-                {stat.label}
-              </div>
-              <div className="text-sm text-gray-500">
-                {stat.description}
-              </div>
-            </Card>
+            <SlideCard key={index} hoverDirection="up" hoverDistance="12px">
+              <Card className="text-center p-6 border-2 border-gray-100 hover:border-tvec-green transition-all duration-300 hover:shadow-xl">
+                <div className="text-4xl font-bold text-tvec-green mb-2">
+                  {stat.value}
+                </div>
+                <div className="text-lg font-semibold text-tvec-navy mb-1">
+                  {stat.label}
+                </div>
+                <div className="text-sm text-gray-500">
+                  {stat.description}
+                </div>
+              </Card>
+            </SlideCard>
           ))}
-        </div>
+        </StaggeredSlideIn>
 
         {/* Company Images */}
-        <div>
-          <Card className="p-8 border-2 border-gray-100">
-            <ImageGrid
-              title="Notre Entreprise en Images"
-              images={companyImages}
-              maxImages={3}
-            />
-          </Card>
-        </div>
+        <SlideIn direction="up" delay={0.3}>
+          <SlideCard className="hover:border-tvec-green">
+            <Card className="p-8 border-2 border-gray-100 transition-all duration-300">
+              <ImageGrid
+                title="Notre Entreprise en Images"
+                images={companyImages}
+                maxImages={3}
+              />
+            </Card>
+          </SlideCard>
+        </SlideIn>
       </div>
     </section>
   );

@@ -1,145 +1,98 @@
 'use client';
 
-import { ScrollReveal } from '@/components/ui/scroll-reveal';
-import { CardGradient } from '@/components/ui/card';
+import { Card } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
+import { CheckCircle, Building, DollarSign, Zap, Globe } from 'lucide-react';
 
 export function GovernmentSection() {
   return (
-    <section id="gouvernements" className="py-20 relative overflow-hidden bg-gradient-to-br from-slate-50 to-blue-50">
-      {/* Background decorative elements */}
-      <div className="absolute inset-0">
-        <div className="absolute top-20 left-10 w-32 h-32 bg-yellow-400/10 rounded-full blur-3xl"></div>
-        <div className="absolute bottom-20 right-10 w-40 h-40 bg-green-500/10 rounded-full blur-3xl"></div>
-      </div>
-
-      <div className="container mx-auto px-4 relative z-10">
-        <ScrollReveal>
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6">
-              Soutien aux{' '}
-              <span className="text-yellow-500">Gouvernements</span>
-            </h2>
-            <div className="w-24 h-1 bg-gradient-to-r from-green-500 to-yellow-500 mx-auto mb-8"></div>
-          </div>
-        </ScrollReveal>
+    <section id="gouvernements" className="py-20 bg-white">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Section Header */}
+        <div className="text-center mb-16">
+          <h2 className="text-4xl md:text-5xl font-bold text-tvec-navy mb-4">
+            Soutien aux <span className="text-tvec-green">Gouvernements</span>
+          </h2>
+          <div className="w-24 h-1 bg-tvec-yellow mx-auto mb-6"></div>
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            Nous collaborons avec les gouvernements pour fournir des solutions 
+            électriques fiables, économiques et alignées sur les politiques nationales.
+          </p>
+        </div>
 
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Left Content */}
-          <ScrollReveal delay={200}>
-            <div className="space-y-8">
-              <CardGradient className="p-8">
-                <div className="bg-blue-600 text-white p-6 rounded-lg mb-6">
-                  <p className="text-lg leading-relaxed">
-                    TVEC est pleinement consciente de l&apos;énorme responsabilité des 
-                    gouvernements, des ministères de l&apos;Énergie et des compagnies d&apos;électricité 
-                    pour fournir une électricité fiable et économique.
-                  </p>
-                </div>
-                
-                <div className="space-y-4">
-                  <h3 className="text-2xl font-bold text-blue-900 mb-4">
-                    La mission de TVEC
-                  </h3>
-                  <p className="text-gray-700 leading-relaxed">
-                    est pleinement alignée sur la sienne, car ses solutions sont à la fois{' '}
-                    <span className="font-semibold text-green-600">fiables</span> et{' '}
-                    <span className="font-semibold text-green-600">économiques</span>.
-                  </p>
-                </div>
-              </CardGradient>
+          <div className="space-y-8">
+            <Card className="p-8 border-2 border-gray-100">
+              <h3 className="text-2xl font-bold text-tvec-navy mb-4">
+                Notre Mission Commune
+              </h3>
+              <p className="text-gray-700 leading-relaxed mb-4">
+                TVEC est pleinement consciente de l&apos;énorme responsabilité des 
+                gouvernements, des ministères de l&apos;Énergie et des compagnies d&apos;électricité 
+                pour fournir une électricité fiable et économique.
+              </p>
+              <p className="text-gray-700 leading-relaxed">
+                Notre mission est alignée sur la vôtre, car nos solutions sont à la fois{' '}
+                <span className="font-semibold text-tvec-green">fiables</span> et{' '}
+                <span className="font-semibold text-tvec-green">économiques</span>.
+              </p>
+            </Card>
 
-              <div className="space-y-4">
-                <h4 className="text-xl font-semibold text-blue-900">
-                  Engagement gouvernemental
-                </h4>
-                <ul className="space-y-3">
-                  <li className="flex items-start space-x-3">
-                    <div className="w-2 h-2 bg-green-500 rounded-full mt-2 flex-shrink-0"></div>
-                    <span className="text-gray-700">
-                      Solutions alignées avec les politiques énergétiques nationales
-                    </span>
-                  </li>
-                  <li className="flex items-start space-x-3">
-                    <div className="w-2 h-2 bg-green-500 rounded-full mt-2 flex-shrink-0"></div>
-                    <span className="text-gray-700">
-                      Réduction des coûts d&apos;infrastructure publique
-                    </span>
-                  </li>
-                  <li className="flex items-start space-x-3">
-                    <div className="w-2 h-2 bg-green-500 rounded-full mt-2 flex-shrink-0"></div>
-                    <span className="text-gray-700">
-                      Amélioration de l&apos;accès à l&apos;électricité pour les citoyens
-                    </span>
-                  </li>
-                  <li className="flex items-start space-x-3">
-                    <div className="w-2 h-2 bg-green-500 rounded-full mt-2 flex-shrink-0"></div>
-                    <span className="text-gray-700">
-                      Développement durable et environnementalement responsable
-                    </span>
-                  </li>
-                </ul>
-              </div>
-
-              <Button variant="primary" size="lg" className="w-full sm:w-auto">
-                Découvrir nos solutions gouvernementales
-              </Button>
+            <div>
+              <h4 className="text-xl font-semibold text-tvec-navy mb-4">
+                Engagement Gouvernemental
+              </h4>
+              <ul className="space-y-3">
+                <li className="flex items-start"><CheckCircle className="w-5 h-5 text-tvec-green mr-3 mt-1 flex-shrink-0" />Solutions alignées avec les politiques énergétiques nationales</li>
+                <li className="flex items-start"><CheckCircle className="w-5 h-5 text-tvec-green mr-3 mt-1 flex-shrink-0" />Réduction des coûts d&apos;infrastructure publique</li>
+                <li className="flex items-start"><CheckCircle className="w-5 h-5 text-tvec-green mr-3 mt-1 flex-shrink-0" />Amélioration de l&apos;accès à l&apos;électricité pour les citoyens</li>
+                <li className="flex items-start"><CheckCircle className="w-5 h-5 text-tvec-green mr-3 mt-1 flex-shrink-0" />Développement durable et responsable</li>
+              </ul>
             </div>
-          </ScrollReveal>
+
+            {/* <Button size="lg" className="bg-tvec-green text-white hover:bg-tvec-green/90 w-full sm:w-auto"> */}
+              {/* Découvrir nos solutions gouvernementales */}
+            {/* </Button> */}
+          </div>
 
           {/* Right Visual */}
-          <ScrollReveal delay={400}>
-            <div className="relative">
-              <div className="bg-gradient-to-br from-blue-600 to-blue-800 rounded-2xl p-8 text-white relative overflow-hidden">
-                {/* African continent silhouette */}
-                <div className="absolute right-4 top-4 opacity-20">
-                  <svg 
-                    width="200" 
-                    height="240" 
-                    viewBox="0 0 200 240" 
-                    fill="currentColor"
-                    className="text-white"
-                  >
-                    <path d="M100 10c-20 0-35 15-35 35 0 25 15 45 35 45s35-20 35-45c0-20-15-35-35-35z M90 95c-30 5-50 20-60 40-10 25-5 50 10 70 20 25 45 30 70 25 20-5 35-20 40-40 5-15 0-30-10-40-15-15-30-25-50-25z M110 160c15 10 25 25 20 45-5 15-20 25-35 25-20 0-35-15-35-35 0-15 10-25 25-30 10-5 20-5 25-5z"/>
-                  </svg>
+          <div className="space-y-8">
+            <Card className="p-8 border-2 border-gray-100">
+              <h3 className="text-2xl font-bold text-tvec-navy mb-6 text-center">
+                Impact Gouvernemental
+              </h3>
+              <div className="grid grid-cols-2 gap-6">
+                <div className="text-center p-4 rounded-lg bg-gray-50">
+                  <div className="text-3xl font-bold text-tvec-green mb-2">65</div>
+                  <div className="text-sm text-gray-600">Pays d&apos;intervention</div>
                 </div>
-
-                <div className="relative z-10">
-                  <h3 className="text-2xl font-bold mb-6">
-                    Impact Gouvernemental
-                  </h3>
-                  
-                  <div className="grid grid-cols-2 gap-6">
-                    <div className="text-center">
-                      <div className="text-3xl font-bold text-yellow-400 mb-2">65</div>
-                      <div className="text-sm opacity-90">Pays d&apos;intervention</div>
-                    </div>
-                    <div className="text-center">
-                      <div className="text-3xl font-bold text-yellow-400 mb-2">25%</div>
-                      <div className="text-sm opacity-90">Coût vs nouvelle ligne</div>
-                    </div>
-                    <div className="text-center">
-                      <div className="text-3xl font-bold text-yellow-400 mb-2">400%</div>
-                      <div className="text-sm opacity-90">Plus rapide</div>
-                    </div>
-                    <div className="text-center">
-                      <div className="text-3xl font-bold text-yellow-400 mb-2">4X</div>
-                      <div className="text-sm opacity-90">Plus d&apos;électricité</div>
-                    </div>
-                  </div>
-
-                  <div className="mt-8 p-4 bg-white/10 rounded-lg">
-                    <div className="text-sm opacity-90 mb-2">Partenaires institutionnels</div>
-                    <div className="flex space-x-2">
-                      <div className="px-3 py-1 bg-white/20 rounded-full text-xs">Banque Mondiale</div>
-                      <div className="px-3 py-1 bg-white/20 rounded-full text-xs">BAD</div>
-                      <div className="px-3 py-1 bg-white/20 rounded-full text-xs">USAID</div>
-                    </div>
-                  </div>
+                <div className="text-center p-4 rounded-lg bg-gray-50">
+                  <div className="text-3xl font-bold text-tvec-green mb-2">25%</div>
+                  <div className="text-sm text-gray-600">Coût vs nouvelle ligne</div>
+                </div>
+                <div className="text-center p-4 rounded-lg bg-gray-50">
+                  <div className="text-3xl font-bold text-tvec-green mb-2">4X</div>
+                  <div className="text-sm text-gray-600">Plus de capacité</div>
+                </div>
+                <div className="text-center p-4 rounded-lg bg-gray-50">
+                  <div className="text-3xl font-bold text-tvec-green mb-2">0</div>
+                  <div className="text-sm text-gray-600">Interruption</div>
                 </div>
               </div>
-            </div>
-          </ScrollReveal>
+            </Card>
+            
+            <Card className="p-8 border-2 border-gray-100">
+              <h3 className="text-2xl font-bold text-tvec-navy mb-6 text-center">
+                Partenaires Institutionnels
+              </h3>
+              <div className="flex flex-wrap justify-center gap-4">
+                <div className="px-4 py-2 bg-gray-100 rounded-full text-sm font-medium text-gray-700">Banque Mondiale</div>
+                <div className="px-4 py-2 bg-gray-100 rounded-full text-sm font-medium text-gray-700">BAD</div>
+                <div className="px-4 py-2 bg-gray-100 rounded-full text-sm font-medium text-gray-700">USAID</div>
+              </div>
+            </Card>
+          </div>
         </div>
       </div>
     </section>

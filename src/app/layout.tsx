@@ -5,6 +5,7 @@ import Navbar04 from "@/components/navbar-04/navbar-04";
 import { Footer } from "@/components/footer";
 import { ScrollRevealProvider } from "@/components/ui/scroll-reveal-provider";
 import { FloatingActionButtons } from "@/components/ui/floating-action-buttons";
+import { ThemeProvider } from "next-themes";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -32,14 +33,16 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <ScrollRevealProvider>
-          <Navbar04 />
-          <main className="pt-24">
-            {children}
-          </main>
-          <Footer />
-          <FloatingActionButtons />
-        </ScrollRevealProvider>
+        <ThemeProvider attribute="class" defaultTheme="light">
+          <ScrollRevealProvider>
+            <Navbar04 />
+            <main>
+              {children}
+            </main>
+            <Footer />
+            <FloatingActionButtons />
+          </ScrollRevealProvider>
+        </ThemeProvider>
       </body>
     </html>
   );
