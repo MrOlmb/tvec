@@ -3,22 +3,22 @@
 import { useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
 
-interface UseGsapScrollTriggerOptions {
+interface UseGsapScrollTriggerOptions<T extends HTMLElement = HTMLElement> {
   trigger?: string;
   start?: string;
   end?: string;
   scrub?: boolean | number;
   pin?: boolean;
   markers?: boolean;
-  animation?: (element: HTMLElement) => gsap.core.Timeline;
+  animation?: (element: T) => gsap.core.Timeline;
   onEnter?: () => void;
   onLeave?: () => void;
   onEnterBack?: () => void;
   onLeaveBack?: () => void;
 }
 
-export function useGsapScrollTrigger(options: UseGsapScrollTriggerOptions = {}) {
-  const elementRef = useRef<HTMLElement>(null);
+export function useGsapScrollTrigger<T extends HTMLElement = HTMLElement>(options: UseGsapScrollTriggerOptions<T> = {}) {
+  const elementRef = useRef<T>(null);
 
   useEffect(() => {
     // Dynamically import ScrollTrigger to avoid SSR issues
@@ -81,7 +81,7 @@ export function useGsapScrollTrigger(options: UseGsapScrollTriggerOptions = {}) 
       // Cleanup function
       return () => {
         ScrollTrigger.getAll().forEach(trigger => {
-          if (trigger.trigger === element || trigger.trigger === trigger) {
+          if (trigger.trigger === element) {
             trigger.kill();
           }
         });

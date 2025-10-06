@@ -23,7 +23,7 @@ export function AnimatedElement({
   start = 'top 80%',
   end = 'bottom 20%'
 }: AnimatedElementProps) {
-  const elementRef = useGsapScrollTrigger({
+  const elementRef = useGsapScrollTrigger<HTMLDivElement>({
     trigger,
     start,
     end,
@@ -164,7 +164,7 @@ export function StaggeredChildren({
   className = '',
   childSelector = '.stagger-child'
 }: StaggeredChildrenProps) {
-  const containerRef = useGsapScrollTrigger({
+  const containerRef = useGsapScrollTrigger<HTMLDivElement>({
     start: 'top 80%',
     animation: (element) => {
       const children = element.querySelectorAll(childSelector);
@@ -204,7 +204,7 @@ export function ParallaxElement({
   className = '',
   speed = 1
 }: ParallaxElementProps) {
-  const elementRef = useGsapScrollTrigger({
+  const elementRef = useGsapScrollTrigger<HTMLDivElement>({
     start: 'top bottom',
     end: 'bottom top',
     scrub: speed,
@@ -304,7 +304,7 @@ export function ElectricalReveal({
     right: { y: 0, x: -50 }
   };
 
-  const elementRef = useGsapScrollTrigger({
+  const elementRef = useGsapScrollTrigger<HTMLDivElement>({
     start: 'top 80%',
     animation: (element) => {
       const { x, y } = directionMap[direction];
