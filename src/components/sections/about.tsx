@@ -31,21 +31,52 @@ export function AboutSection() {
   const companyImages = [
     {
       id: '1',
-      src: '/project-1.png',
-      alt: 'Techno utilisée',
-      title: 'Conducteurs ACCC ultra modernes'
+      src: '/image1.webp',
+      alt: 'Infrastructure électrique moderne',
+      title: 'Infrastructure électrique moderne',
+      description: 'Notre infrastructure électrique utilise les dernières technologies pour assurer une transmission efficace et fiable de l\'électricité à travers le Congo.'
     },
     {
-      id: '2', 
-      src: '/silhouette.jpg',
-      alt: 'Technicien TVEC',
-      title: 'Une equipe qualifiée'
+      id: '2',
+      src: '/image2.webp',
+      alt: 'Technologies de pointe',
+      title: 'Technologies de pointe',
+      description: 'TVEC utilise les produits CTC Global et le conducteur ACCC. Ce câble révolutionnaire est deux fois plus résistant que l\'acier et transporte deux fois plus d\'électricité que les câbles existants.'
     },
     {
       id: '3',
+      src: '/image3.webp',
+      alt: 'Solutions durables',
+      title: 'Solutions durables',
+      description: 'Nos solutions respectent l\'environnement tout en garantissant une performance optimale pour les générations futures.'
+    },
+    {
+      id: '4',
+      src: '/image5.webp',
+      alt: 'Excellence technique',
+      title: 'Excellence technique',
+      description: 'Notre équipe d\'experts techniques assure une mise en œuvre parfaite de nos solutions avec un suivi rigoureux de la qualité.'
+    },
+    {
+      id: '5',
+      src: '/project-1.png',
+      alt: 'Conducteurs ACCC ultra modernes',
+      title: 'Conducteurs ACCC ultra modernes',
+      description: 'Les conducteurs ACCC permettent de transporter jusqu\'à 4 fois plus d\'électricité sans interruption de service.'
+    },
+    {
+      id: '6', 
+      src: '/silhouette.jpg',
+      alt: 'Technicien TVEC',
+      title: 'Une équipe qualifiée',
+      description: 'Notre équipe de techniciens expérimentés assure l\'installation et la maintenance de nos équipements avec expertise.'
+    },
+    {
+      id: '7',
       src: '/high_voltage_power_lines.jpg', 
-      alt: 'Resultats satisfaisants',
-      title: 'Des resultats satisfaisants'
+      alt: 'Résultats satisfaisants',
+      title: 'Des résultats satisfaisants',
+      description: 'Nos projets démontrent des résultats concrets avec une amélioration significative de la capacité de transmission électrique.'
     }
   ];
 
@@ -139,15 +170,18 @@ export function AboutSection() {
 
         {/* Company Images */}
         <SlideIn direction="up" delay={0.3}>
-          <SlideCard className="hover:border-tvec-green">
-            <Card className="p-8 border-2 border-gray-100 transition-all duration-300">
-              <ImageGrid
-                title="Notre Entreprise en Images"
-                images={companyImages}
-                maxImages={3}
-              />
-            </Card>
-          </SlideCard>
+          <div className="text-center mb-12">
+            <h3 className="text-4xl font-bold text-tvec-navy mb-4">
+              Notre Entreprise en Images
+            </h3>
+            <div className="w-32 h-1 bg-tvec-yellow mx-auto"></div>
+          </div>
+          <div className="w-full px-4 sm:px-6 lg:px-8">
+            <ImageGrid
+              images={companyImages}
+              maxImages={7}
+            />
+          </div>
         </SlideIn>
       </div>
     </section>
