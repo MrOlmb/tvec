@@ -130,7 +130,7 @@ export function ImageGrid({
                   {image.description && hoveredImage === image.id && (
                     <div className="absolute inset-0 flex items-center justify-center p-8">
                       <div className="rounded-xl p-8 max-w-2xl text-center">
-                        <p className="text-white text-xl leading-relaxed font-medium">
+                        <p className="text-white text-2xl leading-relaxed font-medium">
                           {image.description}
                         </p>
                       </div>
